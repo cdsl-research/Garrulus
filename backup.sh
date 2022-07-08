@@ -2,9 +2,9 @@
 
 expect -c "
   set timeout 3
-  spawn rsync -av movies futa@futa-backup:~/backup
+  spawn rsync -av movies [user]@[host-name]:~/backup
   expect \"password:\"
-  send -- \"#MEZ92tgj\r\"
+  send -- \"[password]\r\"
   expect eof
   exit
 "
